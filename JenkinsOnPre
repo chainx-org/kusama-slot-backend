@@ -9,7 +9,6 @@ pipeline {
     KUBECONFIG_CREDENTIAL_ID = 'admin'
     REGISTRY = 'docker.io'
     DOCKERHUB_NAMESPACE = 'chainxorg'
-
     APP_NAME = 'kusama-slot-backend'
   }
   parameters {
