@@ -10,7 +10,7 @@ pipeline {
     REGISTRY = 'docker.io'
     DOCKERHUB_NAMESPACE = 'chainxorg'
 
-    APP_NAME = 'server-cid-pre'
+    APP_NAME = 'kusama-slot-backend'
   }
   parameters {
     string(name: 'BRANCH_NAME', defaultValue: 'pre', description: '')
@@ -21,7 +21,7 @@ pipeline {
 
     stage('拉取代码') {
       steps {
-        git(branch: 'pre', url: 'https://github.com/coming-chat/coming-server-cid-transaction.git', credentialsId: 'github-id', changelog: true, poll: false)
+        git(branch: 'pre', url: 'https://github.com/chainx-org/kusama-slot-backend.git', credentialsId: 'github-id', changelog: true, poll: false)
       }
     }
 
@@ -50,8 +50,7 @@ pipeline {
                 variable: 'KUBECONFIG')
               ])
               {
-                sh 'envsubst <  deploy/pre/deploy-server-cid.yaml | kubectl apply -f -'
-                sh 'envsubst <  deploy/pre/deploy-server-cid-svc.yaml  | kubectl apply -f -'
+                sh 'envsubst <  deploy/pre/deploy-kusama-slot-server.yaml | kubectl apply -f -'
               }
             }
 
