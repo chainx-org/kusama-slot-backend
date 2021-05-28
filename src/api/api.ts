@@ -4,9 +4,11 @@ const Koa = require("koa");
 const KoaRouter = require("koa-router");
 const Controller = require("../server");
 const app = new Koa();
+const cors = require('@koa/cors')
 const bodyParser = require("koa-bodyparser");
 
 app.use(bodyParser());
+app.use(cors())
 
 const router = new KoaRouter();
 
@@ -44,6 +46,7 @@ router.post(`/apply`, async (ctx: any) => {
     console.log('err', err)
   }
 });
+
 
 app.use(router.allowedMethods()).use(router.routes());
 

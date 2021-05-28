@@ -30,8 +30,11 @@ spec:
           imagePullPolicy: IfNotPresent
           ports:
             - name: http-main
-              containerPort: 3000
+              containerPort: 8080
               protocol: TCP
+          envFrom:
+            - configMapRef:
+                name: mongodb-pre
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
       dnsPolicy: ClusterFirst

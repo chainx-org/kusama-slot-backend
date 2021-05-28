@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": "https://github.com/chainx-org/kusama-slot-backend.git",
   "scripts": {
-    "start": "ts-node src/api/api.js",
+    "start": "ts-node src/api/api.ts",
     "build": "tsc"
   },
   "dependencies": {

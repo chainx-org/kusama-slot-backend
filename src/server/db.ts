@@ -1,7 +1,7 @@
 
 // @ts-ignore
 const mongoose = require('mongoose');
-const DB_URL: string = `mongodb://admin:password@a26cd83db9d0248dfa68340ca17fc4f6-1763314211.us-east-2.elb.amazonaws.com:27017/kusama-slot?authSource=admin`;
+const DB_URL: string = process.env.KUSAMASLOT_URL!;
 
 // mongoose.connect(DB_URL);
 // 根据警告的提示信息进行配置
