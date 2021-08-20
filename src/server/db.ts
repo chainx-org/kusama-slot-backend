@@ -2,7 +2,7 @@
 // @ts-ignore
 const mongoose = require('mongoose');
 const DB_URL: string = process.env.KUSAMASLOT_URL!;
-
+console.log('DB_URL', DB_URL)
 mongoose.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true });
 
 mongoose.connection.on('connected', () => {
