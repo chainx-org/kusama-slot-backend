@@ -34,7 +34,7 @@ spec:
               protocol: TCP
           envFrom:
             - configMapRef:
-                name: mongodb-prod
+                name: mongo-ksmslot-mongodb
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
       dnsPolicy: ClusterFirst
