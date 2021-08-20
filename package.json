@@ -6,7 +6,8 @@
   "repository": "https://github.com/chainx-org/kusama-slot-backend.git",
   "scripts": {
     "start": "ts-node src/api/api.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "serve": "node dist/src/api/api.js"
   },
   "dependencies": {
     "@koa/cors": "^3.1.0",

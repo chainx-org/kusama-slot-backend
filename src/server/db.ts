@@ -2,7 +2,6 @@
 // @ts-ignore
 const mongoose = require('mongoose');
 const DB_URL: string = process.env.KUSAMASLOT_URL!;
-
 // mongoose.connect(DB_URL);
 // 根据警告的提示信息进行配置
 mongoose.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true });
